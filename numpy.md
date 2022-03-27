@@ -128,4 +128,26 @@ arr表示被分割的数组,indices_or_sections表示分割成几个大小相同
 2. hsplit()函数:水平方向分割  
 ```numpy.hsplit(arr,indices_or_sections)```  
 3. vsplit()函数：竖直方向分割  
-```numpy.hsplit(arr,indices_or_sections)```
+```numpy.hsplit(arr,indices_or_sections)```  
+### 数组转换  
+1. 数组转换成列表  
+```数组名.tolist()```  
+2. 转换数组数据类型  
+```数组名.astype(numpy.数据类型)```  
+### 添加、删除数组元素  
+1. append()函数  
+在数组的末尾添加元素，该函数会返回一个新数组，原数组不变。  
+```numpy.append(arr,values,axis)```  
+arr表示输入的数组,values表示向arr数组添加的元素,values数组列维度与arr列维度相同。  
+values可以是单元素也可以是任意数组。  
+axis表示添加的方向，若未提供axis，则在添加操作前数组会被展开。  
+2. insert()函数  
+在给定索引前，沿给定轴在数组中插入值，该函数会返回一个新数组，原数组不变。
+```numpy.insert(arr,obj,values,axis)```  
+arr表示数组，obj表示**在其之前**插入值的索引  
+若未传递axis参数，在插入前数组会被展开  
+若传递了axis参数，会以广播值数组来匹配数组  
+3. delete()函数  
+与insert类似  
+```numpy.delete(arr,obj,axis)```  
+```np.s_[::]```slice类型  
