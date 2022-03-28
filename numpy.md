@@ -149,8 +149,9 @@ arr表示数组，obj表示**在其之前**插入值的索引
 若传递了axis参数，会以广播值数组来匹配数组  
 3. delete()函数  
 与insert类似  
+从数组中删除还可用切片表示元素范围值。
 ```numpy.delete(arr,obj,axis)```  
-```np.s_[::]```从数组中删除还可用切片表示元素范围值。  
+```np.s_[::]```  
 
 ## numpy数组的矢量运算和通用函数  
 ### 数组的运算  
@@ -172,7 +173,7 @@ arr_c7 = arr_a^2         #按位异或
 将数组的每个元素都与标量运算  
 ### 通用函数（ufunc）  
 针对ndarray数组对象执行元素级运算的函数，并返回新的数组。 
-!(聚合函数)[https://s3.ananas.chaoxing.com/doc/75/8a/0d/a71f769ff759c52c6d18f745041aee22/thumb/45.png] 
+![聚合函数](https://s3.ananas.chaoxing.com/doc/75/8a/0d/a71f769ff759c52c6d18f745041aee22/thumb/45.png) 
 ### 数组计算的四条规则  
 1. 多维数组之间进行运算首先检查```shape```是否匹配  
 2. 数字运算符（+—*/exp,log等）是作用于每个元素  
