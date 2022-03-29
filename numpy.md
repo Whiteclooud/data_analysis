@@ -223,3 +223,51 @@ ldict和gdict为None。
 4. random()函数  
 产生一个[0.0,1.0)之间的浮点数,但数组的元素不包括1。size表示生成元素个数，若没有参数则生成一个数。  
 ```numpy.random.random(size=None)```  
+5. random模块其他随机生成函数  
+![random](https://s3.ananas.chaoxing.com/doc/75/8a/0d/a71f769ff759c52c6d18f745041aee22/thumb/54.png)  
+
+# 用Numpy进行简单的统计分析  
+## 文件的读写操作  
+### 使用Numpy读写文本文件  
+1. 将**一维或二维**数组写入TXT文件或CSV格式文件  
+```numpy.savetxt(fname,array,fmt = '%.18e',delimiter = None,newline = '\n',header = '',footer = '',comments = '#',encoding = None)```   
+fname:文件名(记得加后缀名)。  
+array:需要存的数组(一维或二维)  
+fmt:写入文件的格式，例如%d,%f。(默认为%.18e)  
+delimiter:分隔符，默认是空格。  
+newline:换行符。  
+header:在文件开头写入的字符串。  
+footer:在文件末尾写入的字符串。  
+comments:为添加到页眉和页脚的字符串标记注释符，默认为#。  
+encoding:设置输出文件的编码。
+2. 读取TXT文件和CSV格式文件  
+```numpy.loadtxt(fname,dtype = <数据类型>,comments = '#',delimiter = None,converters = None,skiprows = 0,usecols = None,unpack = False,ndmin = 0,encoding = 'bytes')```  
+fname:被读取的文件名(相对路径或绝对路径)。  
+dtype:数据类型。  
+comments:注释符，默认为#。  
+delimiter:分隔符，默认为空格。  
+converters:将某一列数据经过**函数预处理**后再读取。  
+skiprows:选择跳过的行数。  
+usecols:指定需要读取的列。  
+unpack:默认为'False'，将数据逐行输出。当设置为'True'时，数据将逐列输出。  
+ndmin:维度。  
+encoding:编码方式，默认为'bytes'。    
+###  使用Numpy读写二进制格式文件  
+存储时可省扩展名，读取时不行。  
+1. 使用save()或savez()函数写二进制格式文件  
+```numpy.save(file,array)```.npy  
+```numpy.savez(file,array1,array2...)```(多个数组保存到一个文件).npz  
+2. 使用load()函数读取二进制格式文件  
+```numpy.load(file)```  
+### 使用Numpy读写多维数据文件  
+1. 使用tofile()函数写入多维数据文件。  
+```数组名.tofile(fid,sep = '',format = '%s')```  
+fid:文件、字符串。  
+sep:数据分割，默认为空格。  
+format:写入数据的格式。  
+2. 使用fromfile()函数读取多维数据文件  
+```numpy.fromfile(file,dtype = 'float',count = -1,sep = '')```  
+fid:文件、字符串。  
+dtype:读取的数据类型。  
+count:读取元素个数，-1表示读取整个文件。  
+sep:数据分割，默认为空格。  
