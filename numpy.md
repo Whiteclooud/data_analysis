@@ -271,3 +271,81 @@ fid:文件、字符串。
 dtype:读取的数据类型。  
 count:读取元素个数，-1表示读取整个文件。  
 sep:数据分割，默认为空格。  
+## Numpy常用统计函数  
+1. 求最大值和最小值的函数（对大型数组而言，优于max和min函数）  
+amax()和amin()返回一个数组的最大和最小值，或是沿数轴返回数组的最大和最小值。  
+nanmax()和nanmin()函数用于返回忽略任何NaN的数组的最大值和最小值或者沿沿轴返回忽略NaN的最大值和最小值。  
+```numpy.amax(a,[axis=None[,out=None[,keepdims=False]]])```  
+a:输入数据。  
+axis:轴向。  
+out:替代输出数组，用于放置结果，默认为None。  
+keepdims:默认为False，输出行维度为1；若为True，输出列维度为1。  
+2. 求沿轴方向的取值范围  
+ptp()函数能返回沿某轴方向上的最大值与最小值的插值，即maximun-minimum的值形成的数组。  
+```numpy.ptp(a,[axis=None[,out=None]])```  
+a:输入数据。  
+axis:沿指定某个轴来计算差值。  
+out:替代输出数组，用于放置结果，默认为None。  
+3. 求百分位数  
+percentile()和nanpercentile()函数可以沿某轴方向计算数组中第q数值的百分位数。  
+```percentile(a,q[,axis,out,...])```  
+a:输入数据。  
+q:[0,100]范围的浮点数。  
+axis:沿指定轴向计算百分位数。  
+4. 求中位数  
+median()和nanmean()函数可以沿某轴(axis)方向计算数组中的中位数。  
+```numpy.median(a[,axis,out,overwrite_input,keepdims])```  
+a:输入数据。  
+axis:沿某个轴来计算中位数。  
+5. 求和与加权平均值  
+sum()计算数组或沿轴向计算数组相关元素之和：  
+```sum(a[,axis=None])```  
+average()函数是沿某轴（axis）方向计算数组中相关元素的加权平均值(权值为1时就是计算平均数)。  
+```average(a[,axis=None,weights=None])```  
+weights:权重。  
+6. 算术平均数  
+mean()和nanmean()可以计算数组或沿轴方向的算术平均数。  
+```mean(a[,axis=None])```  
+7. 标准差  
+std()和nanstd()  
+```numpy.std(a[,axis=None])```  
+8. 方差  
+方差是元素与元素平均数差的平方的平均数mean(abs(x-x.mean())**2)。  
+var()和nanvar()  
+```numpy.var(a[,axis=None,dtype=None])```  
+dtype:数据类型。  
+## 使用Numpy函数进行统计分析  
+### Numpy的排序函数  
+1. sort()函数  
+返回输入数组排序的副本。  
+```numpy.sort(arr[,axis,kind,order])```  
+kind:指定排序的算法->快排(Quicksort)、归并排序(Mergesort)或是堆排序(Heapsort),默认为Quicksort。  
+axis:默认为1；  
+order:指明自定义数据类型用于排序的属性。  
+2. argsort()函数  
+返回排序的索引数组。  
+```numpy.argsort(arr[,axis,kind,order])```  
+3. lexsort()函数  
+用于对**多个序列**进行排序，可以看成对电子表格进行排序，每一列代表一个序列，**排序时优先照顾靠后的列**，返回索引。  
+```numpy.lexsort(keys[,axis])```  
+keys:键序列。  
+### Numpy的去重与重复函数  
+1. unique()函数  
+返回输入数组去重后的值，并按照**从小到大**的顺序取排列。  
+可以返回去重后的值组成的去重数组、去重数组的索引数组、去重数组的下标和去重值的重复数量等结果。  
+```numpy.unique(arr,return_index,return_inverse,return_counts)```  
+return_index若为True，返回**去重数组**和**去重数组组索引数组**；  
+return_inverse若为True，返回**去重数组**和**去重数组元素在原数组中的下标**(可用于重构原数组)；  
+return_counts若为True,返回**去重数组**和**去重数组中的元素在原数组中的出现次数**；  
+补充：np.bincount(arr):返回arr中元素出现的个数（从0到最大值）  
+2. tile()函数  
+将一个已有的数组重复一定的次数(对整个数组)。  
+```numpy.tile(arr,reps)```  
+reps:重复的次数。  
+3. repeat()函数  
+对数组的每个元素进行重复。  
+```numpy.repeat(arr,repeats,axis=None)```  
+```a.repeat(repeats,axis)```  
+repeats:指定重复的次数(对行/列，放在数组中)。  
+4. 常用统计函数  
+![aa](https://s3.ananas.chaoxing.com/doc/75/8a/0d/a71f769ff759c52c6d18f745041aee22/thumb/59.png)  
