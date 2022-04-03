@@ -349,3 +349,23 @@ reps:重复的次数。
 repeats:指定重复的次数(对行/列，放在数组中)。  
 4. 常用统计函数  
 ![aa](https://s3.ananas.chaoxing.com/doc/75/8a/0d/a71f769ff759c52c6d18f745041aee22/thumb/59.png)  
+### Numpy的搜索和计数函数  
+1. argmin()、nanargmin()、argmax()、nanargmax()  
+argmin和argmax函数返回指定轴的最小元素或最大元素的索引。  
+nanargmin和nanargmax用于返回忽略NaN后的结果。  
+```numpy.argmin(a[,axis = None])```  
+2. nonzero()函数  
+返回输入数组中非零元素的索引。  
+```numpy.nonzero(a)```  
+3. where()函数  
+返回满足条件x的元素索引，  
+或在x为True时返回y，x为False时返回z。  
+```numpy.where(x[,y,z])```  
+4. extract()函数  
+返回满足任何条件的元素  
+```numpy.extract(x,a)```  
+x为条件表达式，  
+a为传入数组。  
+5. count_nonzero()函数  
+统计Numpy数组中非0元素的个数。  
+```numpy.count_nonzero(a)```  
