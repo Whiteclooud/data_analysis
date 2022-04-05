@@ -173,7 +173,7 @@ arr_c7 = arr_a^2         #按位异或
 将数组的每个元素都与标量运算  
 ### 通用函数（ufunc）  
 针对ndarray数组对象执行元素级运算的函数，并返回新的数组。 
-![聚合函数](https://thumbnail1.baidupcs.com/thumbnail/ddf0faba7td32d90555445da39cb110b?fid=1161491988-250528-813952681873367&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-a%2fY1nC%2b8iPd59FGVjKSI9tQoI6U%3d&expires=8h&chkbd=0&chkv=0&dp-logid=9112376082370362532&dp-callid=0&time=1649142000&size=c1280_u800&quality=90&vuk=1161491988&ft=image&autopolicy=1) 
+![聚合函数](https://thumbnail1.baidupcs.com/thumbnail/849c63d5as78e735959650144736516d?fid=1161491988-250528-353694470029318&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-K5pwv0ev%2b4jkMlq5N9uX%2fSJwioI%3d&expires=8h&chkbd=0&chkv=0&dp-logid=9112376082370362532&dp-callid=0&time=1649142000&size=c1280_u800&quality=90&vuk=1161491988&ft=image&autopolicy=1) 
 ### 数组计算的四条规则  
 1. 多维数组之间进行运算首先检查```shape```是否匹配  
 2. 数字运算符（+—*/exp,log等）是作用于每个元素  
@@ -348,7 +348,7 @@ reps:重复的次数。
 ```a.repeat(repeats,axis)```  
 repeats:指定重复的次数(对行/列，放在数组中)。  
 4. 常用统计函数  
-![aa](https://thumbnail1.baidupcs.com/thumbnail/849c63d5as78e735959650144736516d?fid=1161491988-250528-353694470029318&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-K5pwv0ev%2b4jkMlq5N9uX%2fSJwioI%3d&expires=8h&chkbd=0&chkv=0&dp-logid=9112376082370362532&dp-callid=0&time=1649142000&size=c1280_u800&quality=90&vuk=1161491988&ft=image&autopolicy=1)  
+![aa](https://thumbnail0.baidupcs.com/thumbnail/849c63d5as78e735959650144736516d?fid=1161491988-250528-353694470029318&time=1649142000&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-yk373F15D3%2FIT%2FsAV3uT3p2Fbwk%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=9112601456500632043&dp-callid=0&file_type=0&size=c710_u400&quality=100&vuk=-&ft=video)  
 ### Numpy的搜索和计数函数  
 1. argmin()、nanargmin()、argmax()、nanargmax()  
 argmin和argmax函数返回指定轴的最小元素或最大元素的索引。  
