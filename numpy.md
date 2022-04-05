@@ -14,7 +14,7 @@
 ```itemsize```   返回int，表示数组的每个元素大小（以字节为单位）。   
 
 ### numpy的数据类型  
-![dtype](https://thumbnail1.baidupcs.com/thumbnail/849c63d5as78e735959650144736516d?fid=1161491988-250528-353694470029318&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-K5pwv0ev%2b4jkMlq5N9uX%2fSJwioI%3d&expires=8h&chkbd=0&chkv=0&dp-logid=9112376082370362532&dp-callid=0&time=1649142000&size=c1280_u800&quality=90&vuk=1161491988&ft=image&autopolicy=1)  
+![dtype](https://thumbnail0.baidupcs.com/thumbnail/dfb7f6376id279d2e926d20f8c86db85?fid=1161491988-250528-455856222510878&time=1649142000&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-XOeJ%2FfyBRUeDFREVi6ccGzROdgk%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=9112646430112479190&dp-callid=0&file_type=0&size=c710_u400&quality=100&vuk=-&ft=video)  
 
 ### 自定义数据类型  
 ```类型名=numpy.dtype([(字符串：'name',np.数据类型,长度),(数值：'name',np.数据类型),(···)···])```  
@@ -173,7 +173,7 @@ arr_c7 = arr_a^2         #按位异或
 将数组的每个元素都与标量运算  
 ### 通用函数（ufunc）  
 针对ndarray数组对象执行元素级运算的函数，并返回新的数组。 
-![聚合函数](https://thumbnail1.baidupcs.com/thumbnail/849c63d5as78e735959650144736516d?fid=1161491988-250528-353694470029318&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-K5pwv0ev%2b4jkMlq5N9uX%2fSJwioI%3d&expires=8h&chkbd=0&chkv=0&dp-logid=9112376082370362532&dp-callid=0&time=1649142000&size=c1280_u800&quality=90&vuk=1161491988&ft=image&autopolicy=1) 
+![聚合函数](https://thumbnail0.baidupcs.com/thumbnail/ddf0faba7td32d90555445da39cb110b?fid=1161491988-250528-813952681873367&time=1649142000&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-KiUE96KjnCn5s63M9W2OI%2F130Go%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=9112673447108241752&dp-callid=0&file_type=0&size=c710_u400&quality=100&vuk=-&ft=video) 
 ### 数组计算的四条规则  
 1. 多维数组之间进行运算首先检查```shape```是否匹配  
 2. 数字运算符（+—*/exp,log等）是作用于每个元素  
@@ -224,7 +224,7 @@ ldict和gdict为None。
 产生一个[0.0,1.0)之间的浮点数,但数组的元素不包括1。size表示生成元素个数，若没有参数则生成一个数。  
 ```numpy.random.random(size=None)```  
 5. random模块其他随机生成函数  
-![random](https://thumbnail1.baidupcs.com/thumbnail/55371991an8e25ec1ddd0fb9606c7211?fid=1161491988-250528-605917636802564&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-Y%2bjap%2bhO9AXL2fDDFDrAijftid4%3d&expires=8h&chkbd=0&chkv=0&dp-logid=9112376082370362532&dp-callid=0&time=1649142000&size=c1280_u800&quality=90&vuk=1161491988&ft=image&autopolicy=1)  
+![random](https://thumbnail0.baidupcs.com/thumbnail/55371991an8e25ec1ddd0fb9606c7211?fid=1161491988-250528-605917636802564&time=1649142000&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-rFMcROXkLLKYWRP0o%2BdV4p5aVbw%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=9112693378965209303&dp-callid=0&file_type=0&size=c710_u400&quality=100&vuk=-&ft=video)  
 
 # 用Numpy进行简单的统计分析  
 ## 文件的读写操作  
