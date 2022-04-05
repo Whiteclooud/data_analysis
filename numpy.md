@@ -14,7 +14,7 @@
 ```itemsize```   返回int，表示数组的每个元素大小（以字节为单位）。   
 
 ### numpy的数据类型  
-![dtype](https://thumbnail1.baidupcs.com/thumbnail/dfb7f6376id279d2e926d20f8c86db85?fid=1161491988-250528-455856222510878&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-ZPJOeUyNzKrERmiAuYGbxwt8VRg%3d&expires=8h&chkbd=0&chkv=0&dp-logid=9112376082370362532&dp-callid=0&time=1649142000&size=c1280_u800&quality=90&vuk=1161491988&ft=image&autopolicy=1)  
+![dtype](https://thumbnail1.baidupcs.com/thumbnail/849c63d5as78e735959650144736516d?fid=1161491988-250528-353694470029318&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-K5pwv0ev%2b4jkMlq5N9uX%2fSJwioI%3d&expires=8h&chkbd=0&chkv=0&dp-logid=9112376082370362532&dp-callid=0&time=1649142000&size=c1280_u800&quality=90&vuk=1161491988&ft=image&autopolicy=1)  
 
 ### 自定义数据类型  
 ```类型名=numpy.dtype([(字符串：'name',np.数据类型,长度),(数值：'name',np.数据类型),(···)···])```  
