@@ -31,6 +31,8 @@ y:y轴数据,列表或数组。(xy只能是位置参数,不能作为关键字参
 fmt:接受简写来定义图的基本属性,为一个字符串。(可以与关键字参数混用,当发生冲突时,关键字参数优先)  
 data:绘制带有标记数据的对象(如字典,dataframe),若传参,此时x,y不接收数据,只接收标签。  
 ![颜色](https://thumbnail0.baidupcs.com/thumbnail/7d893601fo6d75eadeca06b8cae8f881?fid=1161491988-250528-130345986620849&time=1649851200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-RxtQroXqwAlY6gJh8NpXEEZbgCY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=79447553622120281&dp-callid=0&file_type=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![线形](https://thumbnail0.baidupcs.com/thumbnail/7d893601fo6d75eadeca06b8cae8f881?fid=1161491988-250528-130345986620849&time=1649851200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-RxtQroXqwAlY6gJh8NpXEEZbgCY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=79580709517297378&dp-callid=0&file_type=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![属性名](https://thumbnail0.baidupcs.com/thumbnail/a994e2ebdkb00aa125d8cc721bd75ccb?fid=1161491988-250528-998900937765904&time=1649851200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-KLBMdkKme4X0k0lBvevSE9g3Coo%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=79587726795378362&dp-callid=0&file_type=0&size=c710_u400&quality=100&vuk=-&ft=video)
 ### 通用步骤  
 1. 创建画布：plt.figure()  
 2. 画图：plt.***()  
