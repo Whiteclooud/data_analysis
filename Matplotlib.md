@@ -69,7 +69,7 @@ bottom:y轴的基线,默认是0,也就是距离底部为0。
 align:对齐方式,默认是center,也就是跟指定的x坐标居中对齐,还有为edge,靠边对齐,具体靠左还是靠右,看width的正负。  
 color:条形图的颜色。  
 **可以通过调整bottom来绘制堆叠条形图**  
-**可以通过调整width来绘制分组条形图**  
+**可以通过调整width和x来绘制分组条形图**  
 #### 直方图  
 条形图应用场景:  
 1. 显示各组数据数量的分布情况。    
@@ -165,6 +165,13 @@ xy:被标注的点的坐标。
 xytext:标注内容相对与坐标的位置。  
 arrowprops:箭头。  
 ![arrowprops](https://thumbnail0.baidupcs.com/thumbnail/5a0341d88h2a120665c816d26375217e?fid=1161491988-250528-720736193262549&time=1650013200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-rGJVjKpsQPcagBD9ZAj5sZaWaDY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=122850698710716286&dp-callid=0&file_type=0&size=c710_u400&quality=100&vuk=-&ft=video)  
+**同时设置多个注释的方法**
+```
+#1.zip()函数  
+for i,j in zip(a,b):  #i,j分别遍历a,b  
+#2.enumeric()函数  
+for i,j in enumeric(data):  #遍历data,i为下标,j为值  
+```
 ### 显示图例  
 ```
 plt.legend(loc)  
