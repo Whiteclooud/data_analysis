@@ -156,4 +156,45 @@ r=0，表示两个变量之间不存在线性关系，但并不代表两个变�
 - 如果由数据框调用corr()函数，那么将会计算列与列之间的相似度。
 - 如果由序列调用corr()方法，那么只是该序列与传入的序列之间的相关度。函数返回值如下。
 - DataFrame调用：返回DataFrame。
-- Series调用：返回一个数值型数据，大小为相关度。
+- Series调用：返回一个数值型数据，大小为相关度。  
+
+## Pandas函数使用  
+### 通用函数  
+**1. 行列通用函数`apply()`**  
+`DataFrame.apply(函数,axis)`:指定的轴方向应用自定义函数(默认axis=0:对列；axis=1:对行)  
+DataFrame:若使用的对象为Series,则默认一整列,整个Series是一个对象,一个整体。  
+函数:若函数为内置函数,例如`mean`,则需要用''包起来。  
+`lambda 参数:表达式`  
+参数列表：多个参数用逗号隔开,例如a,b,c  
+**2. 元素级通用函数`applymap() & map()`**  
+`DataFrame.applymap(函数)`对数据框(DataFrame)对象每个元素进行操作  
+`Series.map(函数)`对数据框的某一列(series)对象每个元素进行操作  
+**2. 可使用NumPy的通用函数**  
+### 排序和排名  
+**1. 索引排序**
+`DataFrame.sort_index()`：排序默认使用升序排序，ascending=False 为降序排序  
+`DataFrame.reset_index(level=None, drop=False, name=NoDefault.no_default, inplace=False)`  
+inplace:是否在原数据上改动,默认为False。  
+**2. 按值排序**  
+`DataFrame.sort_values('columns',ascending=True,na_position)`  
+根据某一列名进行排序,若有其他相同列名则报错。  
+ascending:是否升序排列,默认为True,降序为False。  
+na_position:排序后空值的位置，‘first’或‘last’, default ‘last'。  
+inplace:是否在原数据上改动,默认为False。  
+**3. 排名**  
+`DataFrame.rank(ascending, method = ‘max’,axis)`  
+返回每个元素在原序列中的排名,初始值为1。有N个相同的元素，排名会相加并除以N。  
+若对DataFrame进行排名,则根据axis指定的轴进行排名。   
+ascending:是否升序排列,默认为True,降序为False。  
+method:'max','min','first'。排名相同时的取值,默认取均值。  
+inplace:是否在原数据上改动,默认为False。  
+|参数|说明
+|:---:|:---:|
+|average|默认值,即在相等分组中,为各值分配平均排名|
+|min|使用整个分组的最小排名|
+|max|使用整个分组的最大排名|
+|first|按值在原始数据中出现的顺序分配排名|
+|dense|于min类似,但是排名每次只会增加1,即并列的数据只占一个名次|  
+`nlargest()和nsmallest()方法`  
+`DataFrame.nsmallest(n,columns)`:在数据中找到columns列为最小的n个值  
+`DataFrame.nlargest(n,columns)`:在数据中找到columns列最大的n个值  
