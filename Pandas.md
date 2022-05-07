@@ -169,7 +169,7 @@ DataFrame:若使用的对象为Series,则默认一整列,整个Series是一个�
 **2. 元素级通用函数`applymap() & map()`**  
 `DataFrame.applymap(函数)`对数据框(DataFrame)对象每个元素进行操作  
 `Series.map(函数)`对数据框的某一列(series)对象每个元素进行操作  
-**2. 可使用NumPy的通用函数**  
+**3. 可使用NumPy的通用函数**  
 ### 排序和排名  
 **1. 索引排序**
 `DataFrame.sort_index()`：排序默认使用升序排序，ascending=False 为降序排序  
@@ -195,6 +195,67 @@ inplace:是否在原数据上改动,默认为False。
 |max|使用整个分组的最大排名|
 |first|按值在原始数据中出现的顺序分配排名|
 |dense|于min类似,但是排名每次只会增加1,即并列的数据只占一个名次|  
-`nlargest()和nsmallest()方法`  
+
+**nlargest()和nsmallest()方法**  
 `DataFrame.nsmallest(n,columns)`:在数据中找到columns列为最小的n个值  
 `DataFrame.nlargest(n,columns)`:在数据中找到columns列最大的n个值  
+
+### 映射与数据转换  
+用字典创建映射关系,把元素和一个特定的标签或字符串绑定起来。  
+**replace()函数:**替换元素  
+**map()函数**新建一列  
+**rename()函数**替换索引  
+
+### 数据合并  
+在数据采集时，往往会将数据分散存储于不同的数据集中。
+而在数据分析时，常常又需要通过一个或多个键将两个数据集的行连接起来，
+或者沿着一条轴将多个数据堆叠到一起，以实现数据合并操作。
+数据合并操作类似于数据库中运用SQL语句的JOIN连接来实现多表查询。
+通过数据合并，可以将多个数据集整合到一个数据集中。  
+1. merge()函数  
+通过两个数据集中一个或多个键来合并数。  
+`pd.merge:(left, right, how='inner',on=None,left_index=True,right_index=True )`  
+left:参与合并的左侧DataFrame。  
+right:参与合并的右侧DataFrame。  
+how:合并方式,默认为`inner`内连接(交集)。`outer`外连接(并集),`left`左连接(取左侧全部数据),`right`右连接(取右侧全部数据)。  
+on:用于连接的列名(指定主键)。  
+left_index:如果为True,则使用左侧DataFrame中的行标签作为其连接键。  
+right_index:如果为True,则使用右侧DataFrame中的行标签作为其连接键。  
+suffixes:字符串组成的元组,用于指定当作用DataFrame存在相同列名时,在列名后面附加的后缀名称。  
+2. join()函数  
+列名不可重复,相当于新增列。  
+`left.join(right,on='keys')`  
+left,right:用于连接的左右表。  
+on:默认通过index连接,也可以通过参数"on"来指定连接的列。  
+3. concat()函数  
+列名可重复，仅是拼接  
+`pd.concat([data1,data2],axis)`  
+
+### 缺失值与重复值处理  
+1. 缺失值检测  
+`isnull()`函数:有空值返回True,无空值返回False。  
+2. 统计缺失值个数  
+`np.sum(data.isnull(), axis=0)`   →（ axis=0按列， axis=1按行）  
+True/False可用于计算  
+3. 删除缺失值  
+**删除缺失值的行/列(删除列的方式)：**`data.drop(['缺失值的列名'],axis)`  
+**删除缺失值函数：**`dropna(axis=0, how='any', thresh=None, inplace=False)：`  
+how:取值为'all'表示这一行或列中元素全部缺失才删除,'any'表示有一个就删除(默认)。  
+tresh:一行或一列中至少出现了tresh个才删除。  
+4. 填充缺失值  
+`data.fillna(填充值)`  
+填充值:可为具体数值,也可为键为列索引的字典,表示对每一列分别填充。  
+5. 重复值处理  
+检查是否有重复值:
+`data.duplicated(subset=None,keep='first')`  
+subset:用于识别重复的列标签或列标签序列(默认使用所有列)。  
+keep:若为'first',表示除第一次出现外,其余相同的重复项标记为True;'last'表示除最后一次出现外,其余相同重复项为True;'False'表示将所有重复项几位True;默认为first。  
+删除重复值:
+`data.drop_duplicates(subset=None,keep='first',inplace=False)`  
+subset:用于识别重复的列标签或列标签序列(默认使用所有列)。  
+keep:若为'first',表示除第一次出现外,其余删除其余重复项;'last'表示除最后一次出现外,删除其余重复项;'False'表示删除所有重复项;默认为first。  
+inplace:True表示直接修改原对象,False表示创建一个副本(默认)。  
+
+
+
+
